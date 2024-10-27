@@ -1,14 +1,12 @@
 {
   "name": "@dynamicfrm/js",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "jest --experimental-vm-modules"
   },
   "keywords": ["formularios dinámicos", "construcción de formularios", "frontend", "JavaScript"],
-  "author": "",
-  "license": "ISC",
   "description": "Librería en JavaScript para crear formularios personalizados.",
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -21,5 +19,14 @@
       "^.+\\.jsx?$": "babel-jest"
     },
     "testEnvironment": "node"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/backsoul/dynamic-form-js"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "author": "Daniel Sarmiento Cuervo",
+  "license": "ISC"
 }
