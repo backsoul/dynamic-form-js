@@ -24,9 +24,6 @@
     "type": "git",
     "url": "https://github.com/backsoul/dynamic-form-js"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "author": "Daniel Sarmiento Cuervo",
   "license": "ISC"
 }

@@ -9,23 +9,88 @@ Instala la librería desde npm:
 npm install @dynamicfrm/js
 ```
 
+Aquí tienes una versión mejorada y estructurada para la documentación de los campos disponibles en la librería **Dynamic Form**:
+
+---
+
 ## Campos Disponibles
 
-La lista de campos disponibles incluye diversas opciones para la creación de formularios:
+La librería **Dynamic Form** permite una gran flexibilidad al construir formularios personalizados, ofreciendo una variedad de tipos de campos. A continuación se detallan las opciones disponibles, sus propiedades y configuraciones:
 
-- **`text-title`**: Título
-- **`text-subtitle`**: Subtítulo
-- **`text-paragraph`**: Párrafo
-- **`text-field`**: Campo de texto simple
-- **`list-field`**: Lista de selección simple (con opciones personalizables)
-- **`list-multiply-field`**: Lista de selección múltiple (con opciones personalizables)
-- **`date-field`**: Fecha
-- **`qr-field`**: Código QR (con URL especificada)
-- **`yt-video`**: Video de YouTube (URL de YouTube especificada)
-- **`email-field`**: Correo electrónico (con email y asunto opcional)
-- **`fb-field`**: Enlace de Facebook (con URL especificada)
+### Campos de Texto
 
-Cada campo es configurable y puede personalizarse al agregarlo al formulario.
+- **`text-title`**:  
+  - **Descripción**: Campo de texto utilizado para títulos de sección o encabezados principales.
+  - **Propiedad**: `name` (nombre del campo).
+
+- **`text-subtitle`**:  
+  - **Descripción**: Campo de texto para subtítulos o encabezados secundarios.
+  - **Propiedad**: `name` (nombre del campo).
+
+- **`text-paragraph`**:  
+  - **Descripción**: Campo de texto extenso ideal para párrafos descriptivos o informativos.
+  - **Propiedad**: `name` (nombre del campo).
+
+- **`text-field`**:  
+  - **Descripción**: Campo de texto simple, adecuado para respuestas cortas o entradas de usuario.
+  - **Propiedad**: `name` (nombre del campo).
+
+### Campos de Selección
+
+- **`list-field`**:  
+  - **Descripción**: Lista desplegable para seleccionar una única opción.
+  - **Propiedades**: 
+    - `name`: Nombre del campo.
+    - `options`: Array de opciones personalizables, ej., `["Opción 1", "Opción 2", "Opción 3"]`.
+
+- **`list-multiply-field`**:  
+  - **Descripción**: Lista de selección múltiple que permite elegir varias opciones.
+  - **Propiedades**:
+    - `name`: Nombre del campo.
+    - `options`: Array de opciones personalizables, ej., `["Opción 1", "Opción 2", "Opción 3"]`.
+
+### Campos de Fecha
+
+- **`date-field`**:  
+  - **Descripción**: Campo para seleccionar una fecha específica.
+  - **Propiedad**: `name` (nombre del campo).
+
+### Campos Especiales
+
+- **`qr-field`**:  
+  - **Descripción**: Genera un código QR que redirige a una URL específica.
+  - **Propiedades**: 
+    - `name`: Nombre del campo.
+    - `url`: URL que se codificará en el QR.
+
+- **`yt-video`**:  
+  - **Descripción**: Inserta un video de YouTube embebido en el formulario.
+  - **Propiedades**:
+    - `url`: URL del video en YouTube.
+
+- **`email-field`**:  
+  - **Descripción**: Campo para ingresar o mostrar una dirección de correo electrónico.
+  - **Propiedades**:
+    - `email`: Correo electrónico asociado.
+    - `subject`: Asunto opcional del correo electrónico.
+
+- **`fb-field`**:  
+  - **Descripción**: Enlace de redirección a un perfil o página de Facebook.
+  - **Propiedades**:
+    - `url`: URL del enlace de Facebook.
+
+### Ejemplo de Configuración de Campo
+
+Cada campo puede configurarse fácilmente mediante un objeto JSON. A continuación se muestra un ejemplo de configuración para un campo de selección simple:
+
+```json
+{
+  "field": "list-field",
+  "name": "Seleccione una opción",
+  "options": ["Opción 1", "Opción 2", "Opción 3"]
+}
+```
+
 
 ## Uso
 
