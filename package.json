@@ -1,10 +1,10 @@
 {
   "name": "@dynamicfrm/js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest --experimental-vm-modules"
+    "test": "jest"
   },
   "keywords": ["formularios dinámicos", "construcción de formularios", "frontend", "JavaScript"],
   "description": "Librería en JavaScript para crear formularios personalizados.",
