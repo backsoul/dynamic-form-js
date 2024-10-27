@@ -1,7 +1,3 @@
-Aquí tienes una versión mejorada de la documentación en formato README para la librería `dynamic form` en JavaScript. He estructurado los ejemplos para que sea claro el uso de cada función principal, incluyendo la inicialización, creación de formularios y respuestas.
-
----
-
 # Dynamic Form
 
 **Dynamic Form** es una librería en JavaScript que permite crear formularios personalizados de manera dinámica, gestionar los datos en tiempo real y exportar las respuestas.
@@ -10,7 +6,7 @@ Aquí tienes una versión mejorada de la documentación en formato README para l
 
 Instala la librería desde npm:
 ```bash
-npm install @dynamicfrm/dynamic-form
+npm install @dynamicfrm/js
 ```
 
 ## Uso
@@ -18,7 +14,7 @@ npm install @dynamicfrm/dynamic-form
 Importa y configura una nueva instancia de `DynamicForm` con el UUID del formulario.
 
 ```javascript
-import DynamicForm from './src/dynamic.js';
+import DynamicForm from "@dynamicfrm/js";
 
 const form = new DynamicForm('113c751d-d0ed-44f0-b141-46b4fa4a6972');
 ```
@@ -43,11 +39,11 @@ form
   });
 
 const { url, error } = await form.createFormulary();
-console.log(url, error);
+console.log(url, error); // URL: https://www.dynamicform.site/113c751d-d0ed-44f0-b141-46b4fa4a6972
 ```
 
 **Salida esperada**:
-- **`url`**: la URL donde se puede acceder al formulario creado.
+- **`url`**: la URL donde se puede acceder al formulario creado (`https://www.dynamicform.site/{uuid}`).
 - **`error`**: cualquier error que ocurra durante la creación.
 
 ### Obtener un Formulario Existente
@@ -128,7 +124,7 @@ console.log(responses, error);
 ## Ejemplo Completo
 
 ```javascript
-import DynamicForm from './src/dynamic.js';
+import DynamicForm from "@dynamicfrm/js";
 
 const form = new DynamicForm('113c751d-d0ed-44f0-b141-46b4fa4a6972');
 
@@ -139,7 +135,7 @@ form
   .addField({ type: 'date-field', name: 'Fecha de nacimiento' });
 
 const { url } = await form.createFormulary();
-console.log('URL del formulario:', url);
+console.log('URL del formulario:', url); // URL: https://www.dynamicform.site/113c751d-d0ed-44f0-b141-46b4fa4a6972
 
 // Obtener el formulario
 const { formulary } = await form.getFormulary();
