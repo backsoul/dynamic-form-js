@@ -9,6 +9,24 @@ Instala la librería desde npm:
 npm install @dynamicfrm/js
 ```
 
+## Campos Disponibles
+
+La lista de campos disponibles incluye diversas opciones para la creación de formularios:
+
+- **`text-title`**: Título
+- **`text-subtitle`**: Subtítulo
+- **`text-paragraph`**: Párrafo
+- **`text-field`**: Campo de texto simple
+- **`list-field`**: Lista de selección simple (con opciones personalizables)
+- **`list-multiply-field`**: Lista de selección múltiple (con opciones personalizables)
+- **`date-field`**: Fecha
+- **`qr-field`**: Código QR (con URL especificada)
+- **`yt-video`**: Video de YouTube (URL de YouTube especificada)
+- **`email-field`**: Correo electrónico (con email y asunto opcional)
+- **`fb-field`**: Enlace de Facebook (con URL especificada)
+
+Cada campo es configurable y puede personalizarse al agregarlo al formulario.
+
 ## Uso
 
 Importa y configura una nueva instancia de `DynamicForm` con el UUID del formulario.
@@ -18,6 +36,7 @@ import DynamicForm from "@dynamicfrm/js";
 
 const form = new DynamicForm('113c751d-d0ed-44f0-b141-46b4fa4a6972');
 ```
+
 
 ### Crear un Formulario
 
