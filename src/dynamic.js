@@ -100,13 +100,20 @@ class DynamicForm {
         if (!data || data.length === 0) {
             return { answers: null, error: 'No hay respuestas en el formulario' };
         }
+
+        const fieldIndexMap = formulary.reduce((acc, field) => {
+            acc[field.index] = field.name;
+            return acc;
+        }, {});
+
         const answers = data.map(item => {
-            const fieldData = JSON.parse(item.fields)[0];
-            return {
-                field: formulary[fieldData.index].name,
-                answer: fieldData.value,
-            };
-        });
+            const fieldData = JSON.parse(item.fields);
+            return fieldData.map(field => ({
+                field: fieldIndexMap[field.index] || 'Desconocido',
+                answer: field.value,
+            }));
+        }).flat();
+
         return { answers, error: null };
     }
 
